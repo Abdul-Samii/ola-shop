@@ -5,19 +5,13 @@ import { LuMenu } from "react-icons/lu";
 const  HamburgerMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenu = () => {
-    setIsMenuOpen(prevState => {
-      !prevState ? document.querySelector('.navigation')?.classList.add('active') : 
-      document.querySelector('.navigation')?.classList.remove('active')
-      return !prevState
-    });
-  }
+  const handleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   const handleSwipe = useCallback((start: number, end: number) => {
     let totalDistance = end - start;
+    console.log("isMenu ", totalDistance)
     if (Math.abs(totalDistance) > 30) {
-      setIsMenuOpen(totalDistance>0);
-      handleMenu();
+      setIsMenuOpen(!(totalDistance>0));
     }
   }, [])
 
@@ -43,7 +37,7 @@ const  HamburgerMenu = () => {
   return (
     <div className="md:hidden">
       <LuMenu className="mr-2" color='white' size={24} onClick={handleMenu} />
-      <ul className="navigation fixed transition-all duration-200 ease-in-out bg-orange-500 h-full right-[-2000px] w-1/2 mt-5 uppercase text-white text-sm">
+      <ul className={"navigation fixed transform transition-all duration-500 ease-in-out bg-orange-500 h-full right-0 w-1/2 mt-5 uppercase text-white text-sm " + (isMenuOpen ? 'translate-x-0' : 'translate-x-full')}>
         <li className="border-b-[0.5px] px-[20px] py-[10px] border-orange-300 hover:bg-orange-300">Login</li>
         <li className="border-b-[0.5px] px-[20px] py-[10px] border-orange-300 hover:bg-orange-300">Signup</li>
         <li className="border-b-[0.5px] px-[20px] py-[10px] border-orange-300 hover:bg-orange-300">Cart</li>
