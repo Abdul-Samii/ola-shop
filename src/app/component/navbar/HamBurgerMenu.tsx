@@ -9,7 +9,6 @@ const  HamburgerMenu = () => {
 
   const handleSwipe = useCallback((start: number, end: number) => {
     let totalDistance = end - start;
-    console.log("isMenu ", totalDistance)
     if (Math.abs(totalDistance) > 30) {
       setIsMenuOpen(!(totalDistance>0));
     }
