@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .navigation.active {
-  right: 0
+  transform: translateX(0)
 }
