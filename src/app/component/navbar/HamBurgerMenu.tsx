@@ -34,7 +34,7 @@ const  HamburgerMenu = () => {
   }, [handleSwipe]);
 
   return (
-    <div className="md:hidden">
+    <div className="md:hidden z-50">
       <LuMenu className="mr-2" color='white' size={24} onClick={handleMenu} />
       <ul className={"navigation fixed transform transition-all duration-500 ease-in-out bg-orange-500 h-full right-0 w-1/2 mt-5 uppercase text-white text-sm " + (isMenuOpen ? 'translate-x-0' : 'translate-x-full')}>
         <li className="border-b-[0.5px] px-[20px] py-[10px] border-orange-300 hover:bg-orange-300">Login</li>
