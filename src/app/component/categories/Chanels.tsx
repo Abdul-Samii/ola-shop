@@ -38,7 +38,7 @@ const Channels = () => {
         {
           channelsList.slice(0, chanelDisplayNumber).map((channel: any, index: any) => (
             <Fragment key={index}>
-              <div key={index} className="cursor-pointer">
+              <div key={index} className="cursor-pointer hover:text-orange-500">
                 <Image
                   src={channel.img}
                   alt={channel.name}
