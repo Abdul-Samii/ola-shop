@@ -50,7 +50,7 @@ const Categories = () => {
       <div className="grid grid-cols-3 md:grid-cols-8 bg-white">
         {
           categories.slice(0, displayCategoriesNumber).map((category, index) => (
-            <div key={index} className="border-[0.1px] p-4 flex flex-col cursor-pointer">
+            <div key={index} className="border-[0.1px] p-4 hover:shadow-lg flex flex-col cursor-pointer">
               <Image
                 src={category.src}
                 alt={category.name}
