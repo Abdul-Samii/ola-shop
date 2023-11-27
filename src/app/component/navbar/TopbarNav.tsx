@@ -10,7 +10,7 @@ import HamburgerMenu from "./HamBurgerMenu";
 
 const TopbarNav = () => {
   return (
-    <div className="bg-orange-500 h-16 flex items-center justify-center">
+    <div className="bg-orange-500 h-16 flex items-center justify-center z-50 fixed w-full top-0">
       <h2 className="text-white font-extrabold text-2xl ">OlaShop</h2>
       <div className="md:w-1/2 flex items-center relative">
         <Input
