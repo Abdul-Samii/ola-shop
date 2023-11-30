@@ -8,3 +8,14 @@ export interface iconsType {
   size: number,
   className: string,
 }
+
+export interface RatingStarType {
+  rating: number;
+}
+
+export interface ButtonType {
+  className: string;
+  btnTitle: string;
+  onClick: () => void;
+}
+
