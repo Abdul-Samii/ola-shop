@@ -5,3 +5,7 @@
 .navigation.active {
   transform: translateX(0)
 }
+
+/* * {
+  outline: solid 1px black;
+} */

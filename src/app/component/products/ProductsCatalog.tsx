@@ -26,7 +26,7 @@ const ProductsCatalog = async() => {
   return (
     <div className="mt-4">
       <h3 className="font-medium text-lg pl-2">Just For You</h3>
-      <div className="grid md:grid-cols-4 lg:grid-cols-6 grid-cols-2">
+      <div className="grid md:grid-cols-4 lg:grid-cols-6 grid-cols-2 gap-y-4 gap-x-1 mt-4">
       {
         productsData?.map((product: any, index: number) => (
           <ProductCard product={product} key={index} />

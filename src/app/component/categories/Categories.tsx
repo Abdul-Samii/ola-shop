@@ -42,7 +42,7 @@ const Categories = () => {
   }, [handleResize]);
 
   return (
-    <div className="mt-6 order-1 md:order-4">
+    <div className="mt-6 order-1 md:order-5">
       <div className="flex justify-between p-2">
         <h3 className="font-medium text-lg">Categories</h3>
         <h3 className="text-xs text-orange-500 font-semibold my-auto md:hidden">SHOP MORE</h3>
