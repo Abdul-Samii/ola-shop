@@ -1,3 +1,5 @@
+//will be changing this when the APIs are developed
+
 export interface categoryItemType {
   categoryName: string;
   iconName: string;
@@ -19,3 +21,6 @@ export interface ButtonType {
   onClick: () => void;
 }
 
+export interface productCardType {
+  product: any;
+}
