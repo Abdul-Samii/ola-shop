@@ -6,13 +6,12 @@ import { productCardType } from "@/types";
 const ProductCard = ({ product }: productCardType) => {
   return (
     <Fragment>
-      <div className="mx-auto w-[47vw] md:w-[22vw] lg:w-[13.5vw] bg-white  h-[40vh] md:h-[38vw] lg:h-[42vh] mt-4 hover:shadow-lg rounded-md md:rounded-none cursor-pointer flex flex-col">
-        <div className="h-[200px] relative">
+      <div className="lg:w-full bg-white  h-[40vh] md:h-[38vw] lg:h-[42vh] hover:shadow-lg cursor-pointer flex flex-col">
+        <div className="w-[35vw] md:w-[20vw] lg:w-[13.5vw] h-[20vh] md:h-[22vh] lg:h-[80vh]] m-auto mt-2 relative">
           <Image
             src={product.image}
-            alt="smart watch"
+            alt={product.title}
             fill={true}
-            sizes="100vh"
             className="rounded-t-md md:rounded-none absolute"
           />
         </div>

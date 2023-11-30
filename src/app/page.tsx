@@ -7,6 +7,7 @@ import Services from "./component/header/Services";
 import Channels from "./component/categories/Chanels";
 import Banner from "./component/banner/Banner";
 import ProductsCatalog from "./component/products/ProductsCatalog";
+import FlashSale from "./component/flashsales/FlashSale";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
           <Banner />
           <Services />
           <Categories />
+          <FlashSale />
         </div>
         <ProductsCatalog />
       </div>

@@ -34,7 +34,7 @@ const Channels = () => {
   }, [handleResize]);
 
   return (
-    <div className="md:bg-white md:h-32 mt-8 p-4 mb-8 flex justify-between order-1 md:order-3">
+    <div className="md:bg-white md:h-32 mt-8 p-4 mb-8 flex justify-between md:order-4">
         {
           channelsList.slice(0, chanelDisplayNumber).map((channel: any, index: any) => (
             <Fragment key={index}>
