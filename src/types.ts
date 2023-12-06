@@ -19,8 +19,18 @@ export interface ButtonType {
   className: string;
   btnTitle: string;
   onClick: () => void;
+  disabled?: boolean;
 }
 
 export interface productCardType {
   product: any;
+}
+
+export interface BreadCrumbType {
+  className: string;
+  breadcrumbs: {
+    parentCategory: string;
+    subcategory: string;
+    productName: string;
+  };
 }

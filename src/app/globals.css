@@ -9,3 +9,15 @@
 /* * {
   outline: solid 1px black;
 } */
+
+body {
+  background-color: #F5F5F5;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: orange !important;
+}
+
+:root {
+  --swiper-navigation-size: 20px !important;
+}

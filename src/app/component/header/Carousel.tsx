@@ -39,7 +39,7 @@ const Carousel = () => {
     <div className="md:h-80 h-52 w-full relative flex flex-col justify-center lg:ml-4">
       <Image
         src={imgs[itr]?.src}
-        alt={imgs[itr]?.alt}
+        alt={imgs[itr]?.alt || "img"}
         fill={true}
         className='md:rounded-lg transition transform duration-300 delay-200 ease-in-out absolute'
         sizes="full"

@@ -2,17 +2,19 @@ import Image from "next/image";
 import React, { Fragment } from "react";
 import RatingStars from "../elements/RatingStars";
 import { productCardType } from "@/types";
+import Link from "next/link";
 
 const ProductCard = ({ product }: productCardType) => {
   return (
     <Fragment>
-      <div className="lg:w-full bg-white  h-[40vh] md:h-[38vw] lg:h-[42vh] hover:shadow-lg cursor-pointer flex flex-col">
+      <Link href={`/product/${product.id}`} className="lg:w-full bg-white  h-[40vh] md:h-[38vw] lg:h-[42vh] hover:shadow-lg cursor-pointer flex flex-col">
         <div className="w-[35vw] md:w-[20vw] lg:w-[13.5vw] h-[20vh] md:h-[22vh] lg:h-[80vh]] m-auto mt-2 relative">
           <Image
             src={product.image}
             alt={product.title}
             fill={true}
             className="rounded-t-md md:rounded-none absolute"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <p className="pt-6 px-4 text-sm line-clamp-1 md:line-clamp-2">{product.title}</p>
@@ -27,7 +29,7 @@ const ProductCard = ({ product }: productCardType) => {
             <p className="text-xs text-gray-400 mt-1.5 pl-1">({product.rating.count})</p>
           </div>
         </div>
-      </div>
+      </Link>
     </Fragment>
   )
 }
