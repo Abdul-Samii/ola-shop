@@ -13,6 +13,7 @@ export interface iconsType {
 
 export interface RatingStarType {
   rating: number;
+  size?: number;
 }
 
 export interface ButtonType {
@@ -33,4 +34,8 @@ export interface BreadCrumbType {
     subcategory: string;
     productName: string;
   };
+}
+
+export interface ProgressBarType {
+  progressValue: number;
 }

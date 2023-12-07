@@ -1,10 +1,9 @@
 //Needs improvement
-import Image from "next/image";
-import React, { Fragment } from "react";
-import RatingStars from "../elements/RatingStars";
-import Button from "../elements/Button";
+import React from "react";
+
 import { getTheData } from "@/app/actions/actions";
 import ProductCard from "./ProductCard";
+import { Button } from "../elements";
 
 let productsData;
 const ProductsCatalog = async() => {

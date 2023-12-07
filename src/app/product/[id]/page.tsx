@@ -1,13 +1,13 @@
 import React from "react";
-import { BsHeart, BsHeartFill } from "react-icons/bs";
+import { BsHeart } from "react-icons/bs";
 import { MdShare } from "react-icons/md";
 
 import BreadCrumb from "../BreadCrumb";
 import ProductsImg from "../ProductsImgs";
-import RatingStars from "@/app/component/elements/RatingStars";
 import QuantityBtns from "../QuantityBtns";
-import Button from "@/app/component/elements/Button";
 import ProductDelivery from "../ProductDelivery";
+import ProductReviews from "@/app/component/reviews/ProductReviews";
+import { Button, RatingStars } from "@/app/component/elements";
 
 const Product = ({ params }: any) => {
 
@@ -56,6 +56,9 @@ const Product = ({ params }: any) => {
           </div>
         </div>
         <ProductDelivery />
+      </div>
+      <div className="mt-6">
+        <ProductReviews />
       </div>
     </div>
   )
