@@ -10,6 +10,7 @@ const Banner = () => {
         className="md:h-72 w-[90%] m-auto cursor-pointer"
         height={100}
         width={100}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
   )

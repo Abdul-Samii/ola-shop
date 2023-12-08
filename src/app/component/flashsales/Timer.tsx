@@ -6,7 +6,7 @@ const Timer = () => {
   const [countDown, setCountdown] = useState({days: 0, hours: 0, minutes: 0, seconds: 0});
 
   useEffect(() => {
-    const countDownDate = new Date("Dec 1, 2023 10:00:00").getTime();
+    const countDownDate = new Date("Dec 6, 2023 10:00:00").getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;

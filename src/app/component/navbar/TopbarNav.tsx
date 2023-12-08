@@ -7,12 +7,13 @@ import { FiSearch } from "react-icons/fi";
 
 import Input from "../elements/Input";
 import HamburgerMenu from "./HamBurgerMenu";
+import Link from "next/link";
 
 const TopbarNav = () => {
   return (
-    <div className="bg-orange-500 h-16 flex items-center justify-center z-50 fixed w-full top-0">
-      <h2 className="text-white font-extrabold text-2xl ">OlaShop</h2>
-      <div className="md:w-1/2 flex items-center relative">
+    <div className="bg-blue-600 md:bg-orange-500 h-16 flex items-center justify-center z-50 fixed w-full top-0">
+      <Link href="/" className="text-white font-extrabold text-2xl hidden md:block">OlaShop</Link>
+      <div className="md:w-[55%] w-full flex items-center relative">
         <Input
           placeholder="Search in OlaShop"
           className='p-2 rounded-md text-sm mx-4 outline-none w-full'

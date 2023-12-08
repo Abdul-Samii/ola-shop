@@ -1,7 +1,7 @@
 import { productCardType } from "@/types";
 import Image from "next/image";
 import React from "react";
-import RatingStars from "../elements/RatingStars";
+import { RatingStars } from "../elements";
 
 const HorizontalProduct = ({ product }: productCardType) => {
   return (
@@ -15,17 +15,15 @@ const HorizontalProduct = ({ product }: productCardType) => {
           className="absolute"
         />
       </div>
-      <div>
       <div className="mb-3">
-          <h3 className="text-orange-500 text-sm">Rs.{product.price}</h3>
-          <div className="flex">
-            <p className="text-gray-500 text-xs line-through">Rs.8999</p>
-            <p className="text-xs">-22.22%</p>
-          </div>
-          <div className="flex">
-            <RatingStars rating={product.rating.rate} />
-            <p className="text-xs text-gray-400 mt-1.5 pl-1">({product.rating.count})</p>
-          </div>
+        <h3 className="text-orange-500 text-sm">Rs.{product.price}</h3>
+        <div className="flex">
+          <p className="text-gray-500 text-xs line-through">Rs.8999</p>
+          <p className="text-xs">-22.22%</p>
+        </div>
+        <div className="flex">
+          <RatingStars rating={product.rating.rate} />
+          <p className="text-xs text-gray-400 mt-1.5 pl-1">({product.rating.count})</p>
         </div>
       </div>
     </div>

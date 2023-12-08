@@ -45,6 +45,7 @@ const Channels = () => {
                   className="rounded-full shadow-lg md:shadow-none md:rounded-none h-14 w-14 md:h-16 md:w-16"
                   height={70}
                   width={70}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <p className="text-xs p-1 text-center w-14 md:w-[70px] absolute leading-4">{channel.name}</p>
               </div>

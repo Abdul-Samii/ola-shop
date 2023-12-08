@@ -1,9 +1,10 @@
 import React from "react";
-import ProductCard from "../products/ProductCard";
+
+import ProductCard from "../catalog/ProductCard";
 import { getTheData } from "@/app/actions/actions";
-import Button from "../elements/Button";
-import HorizontalProduct from "../products/HorizontalProduct";
+import HorizontalProduct from "../catalog/HorizontalProduct";
 import Timer from "./Timer";
+import { Button } from "../elements";
 
 const FlashSale = async () => {
   let productsData;
