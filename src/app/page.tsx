@@ -1,12 +1,11 @@
 import React from "react";
-import TopbarNav from "./component/navbar/TopbarNav";
 import GenericCategories from "./component/header/GenericCategories";
 import Carousel from "./component/header/Carousel";
 import Categories from "./component/categories/Categories";
 import Services from "./component/header/Services";
 import Channels from "./component/categories/Chanels";
 import Banner from "./component/banner/Banner";
-import ProductsCatalog from "./component/products/ProductsCatalog";
+import ProductsCatalog from "./component/catalog/ProductsCatalog";
 import FlashSale from "./component/flashsales/FlashSale";
 
 const Home = () => {

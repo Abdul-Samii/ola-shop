@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React, { Fragment } from "react";
-import RatingStars from "../elements/RatingStars";
-import { productCardType } from "@/types";
 import Link from "next/link";
+
+import { productCardType } from "@/types";
+import { RatingStars } from "../elements";
 
 const ProductCard = ({ product }: productCardType) => {
   return (
