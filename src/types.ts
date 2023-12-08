@@ -39,3 +39,8 @@ export interface BreadCrumbType {
 export interface ProgressBarType {
   progressValue: number;
 }
+
+export interface PaginationType {
+  currentPg: number;
+  totalPages: number;
+}

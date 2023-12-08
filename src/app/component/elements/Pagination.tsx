@@ -1,16 +1,17 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
-const Pagination = ({ currentPg = 14, totalPages = 30 }) => {
+import { PaginationType } from "@/types";
+
+const Pagination = ({ currentPg, totalPages }: PaginationType) => {
 
   const [currentPage, setCurrentPage] = useState(currentPg);
-  const [final, setFinal] = useState<number[]>([]);
-  const visiblePages = 5;
+  const [visiblePages, setVisiblePages] = useState<number[]>([]);
 
-  const setPages = () => {
-    const startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
-    const endPage = Math.min(totalPages, startPage + visiblePages - 1);
+  const setPages = useCallback(() => {
+    const startPage = Math.max(1, currentPage - Math.floor(5 / 2));
+    const endPage = Math.min(totalPages, startPage + 5 - 1);
     
     const uniquePages = new Set<number>();
 
@@ -19,12 +20,12 @@ const Pagination = ({ currentPg = 14, totalPages = 30 }) => {
         uniquePages.add(i);
       }
     }
-    setFinal(Array.from(uniquePages));
-  };
+    setVisiblePages(Array.from(uniquePages));
+  }, [currentPage, totalPages]);
 
   useEffect(() => {
     setPages();
-  }, []);
+  }, [setPages]);
 
   const handleSelectPage = (page: number) => {
     setCurrentPage(page);
@@ -38,7 +39,7 @@ const Pagination = ({ currentPg = 14, totalPages = 30 }) => {
       <BsChevronLeft size={12} className="my-auto" />
       <p className={pageClasses} onClick={() => handleSelectPage(1)}>1</p>
       <p>...</p>
-      {final?.map((page) => (
+      {visiblePages?.map((page) => (
         <p
           key={page}
           onClick={() => handleSelectPage(page)}

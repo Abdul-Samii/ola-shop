@@ -104,7 +104,10 @@ const ProductReviews = () => {
          ))
         }
         <div className="mt-4">
-          <Pagination />
+          <Pagination
+            currentPg={14}
+            totalPages={30}
+          />
         </div>
       </div>
     </div>
